@@ -1,0 +1,24 @@
+from tkinter import*
+from tkinter import ttk
+from PIL import Image,ImageTk
+w=Tk()
+w.geometry("1300x600")
+w.configure(bg="black")
+im=Image.open("fasion.jpg").resize((1300,600))
+im_t=ImageTk.PhotoImage(im)
+im_lb=Label(w,image=im_t,bg="black")
+im_lb.place(x=0,y=0)
+
+lb=Label(w,text="DRI(TRI)PPIN",font=("copper plate",50,"bold"),bg="gray",fg="white")
+lb.place(x=0,y=0)
+
+box=Entry(w,font=("copper plate",18))
+box.place(x=100,y=150)
+but=Button(w,text="SEARCH",font=("copper plate",12),bg="black",fg="white",height=1)
+but.place(x=9,y=149)
+but=Button(w,text="X",font=("copper plate",12),bg="gray",fg="black",height=1,cursor="circle")
+but.place(x=365,y=149)
+
+
+
+w.mainloop()
